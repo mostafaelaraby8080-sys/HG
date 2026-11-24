@@ -16,7 +16,15 @@ module.exports = async (req, res) => {
     }
     if (!ok) return res.status(401).json({ error: "unauthorized" });
     const b = req.body || {};
-    const cats = ["أجهزة كهربائية", "أدوات منزلية"];
+    const cats = [
+      "غسالات",
+      "تلاجات",
+      "بوتوجازات",
+      "أطقم سفرة",
+      "أطقم حلل",
+      "كاسات",
+      "كوبايات",
+    ];
     const images = (Array.isArray(b.images) ? b.images : [])
       .slice(0, 5)
       .map((x) => String(x).slice(0, 300000));

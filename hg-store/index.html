@@ -610,8 +610,9 @@
           تختار الأنسب لبيتك وميزانيتك، والطلب رسالة واحدة على واتساب.
         </p>
         <div class="chips">
-          <span>أجهزة كهربائية</span><span>أدوات منزلية</span
-          ><span>طلب سريع على واتساب</span>
+          <span>غسالات</span><span>تلاجات</span><span>بوتوجازات</span
+          ><span>أطقم سفرة</span><span>أطقم حلل</span><span>كاسات</span
+          ><span>كوبايات</span><span>طلب سريع على واتساب</span>
         </div>
       </div>
     </section>
@@ -721,8 +722,13 @@
             placeholder="السعر بالجنيه"
           />
           <select id="c">
-            <option>أجهزة كهربائية</option>
-            <option>أدوات منزلية</option>
+            <option>غسالات</option>
+            <option>تلاجات</option>
+            <option>بوتوجازات</option>
+            <option>أطقم سفرة</option>
+            <option>أطقم حلل</option>
+            <option>كاسات</option>
+            <option>كوبايات</option>
           </select>
           <select id="av">
             <option value="1">متاح</option>
@@ -742,7 +748,9 @@
     </div>
 
     <script>
-      const CATS = ["الكل", "أجهزة كهربائية", "أدوات منزلية"];
+      const ELECTRIC_CATS = ["غسالات", "تلاجات", "بوتوجازات"];
+      const HOME_CATS = ["أطقم سفرة", "أطقم حلل", "كاسات", "كوبايات"];
+      const CATS = ["الكل", ...ELECTRIC_CATS, ...HOME_CATS];
       let all = [],
         cat = "الكل",
         edit = null,
@@ -797,7 +805,16 @@
         $("m" + id).style.backgroundImage = "url('" + im(p)[i] + "')";
       }
       function draw() {
-        const l = all.filter((p) => cat == "الكل" || p.category == cat);
+        const l = all.filter((p) => {
+          if (cat === "الكل") return true;
+          if (cat === "أجهزة كهربائية") {
+            return ELECTRIC_CATS.includes(p.category) || p.category === cat;
+          }
+          if (cat === "أدوات منزلية") {
+            return HOME_CATS.includes(p.category) || p.category === cat;
+          }
+          return p.category === cat;
+        });
         $("grid").innerHTML = l.length
           ? l
               .map((p) => {
