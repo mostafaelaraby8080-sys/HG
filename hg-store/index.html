@@ -84,14 +84,6 @@
         background: var(--soft);
         color: var(--ink);
       }
-      .hc {
-        background: var(--ink);
-        color: #fff;
-        padding: 6px 18px;
-        border-radius: 99px;
-        font-size: 14px;
-        font-weight: 700;
-      }
       .hero {
         display: grid;
         grid-template-columns: 1fr;
@@ -457,12 +449,26 @@
         bottom: 16px;
         left: 16px;
         z-index: 8;
-        background: #25d366;
-        color: #fff;
-        font-weight: 700;
-        padding: 8px 18px;
-        border-radius: 99px;
-        box-shadow: 0 6px 18px #0003;
+        display: inline-flex;
+        width: 58px;
+        height: 58px;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        border-radius: 50%;
+        transition: transform 160ms ease;
+      }
+      .wa img {
+        display: block;
+        width: 58px;
+        height: 58px;
+      }
+      .wa:hover {
+        transform: scale(1.06);
+      }
+      .wa:focus-visible {
+        outline: 3px solid var(--ink);
+        outline-offset: 4px;
       }
       #adm {
         display: none;
@@ -544,13 +550,6 @@
           <a href="#products">المنتجات</a><a href="#about">عن HG</a
           ><a href="#contact">تواصل معنا</a>
         </nav>
-        <a
-          class="hc"
-          href="https://wa.me/201286066660"
-          target="_blank"
-          rel="noopener"
-          >واتساب</a
-        >
       </div>
     </header>
 
@@ -698,8 +697,11 @@
       href="https://wa.me/201286066660"
       target="_blank"
       rel="noopener"
-      >واتساب</a
+      aria-label="تواصل عبر واتساب"
+      title="تواصل عبر واتساب"
     >
+      <img src="/whatsapp.svg" alt="" width="58" height="58" />
+    </a>
 
     <div id="adm">
       <div class="box">
