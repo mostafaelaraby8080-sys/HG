@@ -1,0 +1,1019 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>HG | تجارة وتوزيع الأجهزة الكهربائية والأدوات المنزلية</title>
+    <meta
+      name="description"
+      content="HG في دمياط: أجهزة كهربائية وأدوات منزلية بأسعار مناسبة. اطلب على واتساب."
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #0a0a0a;
+        --paper: #fff;
+        --soft: #f5f3ee;
+        --line: #e6e2d8;
+        --gold: #c99a1f;
+        --gold2: #f3d27a;
+        --mu: #6b675c;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: Cairo, Tahoma, sans-serif;
+        background: var(--paper);
+        color: var(--ink);
+        line-height: 1.7;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .wrap {
+        max-width: 1040px;
+        margin: auto;
+        padding: 0 16px;
+      }
+      .gold {
+        color: var(--gold);
+      }
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 9;
+        background: #fff;
+        border-bottom: 1px solid var(--line);
+      }
+      header .wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 64px;
+        gap: 10px;
+      }
+      .logo {
+        background: var(--ink);
+        color: var(--gold2);
+        font-weight: 800;
+        font-size: 22px;
+        letter-spacing: 2px;
+        padding: 0 14px;
+        border-radius: 10px;
+      }
+      nav {
+        display: flex;
+        gap: 4px;
+        font-size: 14px;
+      }
+      nav a {
+        padding: 4px 14px;
+        border-radius: 99px;
+        color: var(--mu);
+      }
+      nav a:hover {
+        background: var(--soft);
+        color: var(--ink);
+      }
+      .hc {
+        background: var(--ink);
+        color: #fff;
+        padding: 6px 18px;
+        border-radius: 99px;
+        font-size: 14px;
+        font-weight: 700;
+      }
+      .hero {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 34px;
+        padding: 34px 16px 30px;
+        align-items: center;
+      }
+      @media (min-width: 800px) {
+        .hero {
+          grid-template-columns: 1.1fr 1fr;
+        }
+      }
+      @media (max-width: 640px) {
+        nav {
+          display: none;
+        }
+      }
+      .pill {
+        display: inline-block;
+        background: var(--soft);
+        border: 1px solid var(--line);
+        font-size: 13px;
+        font-weight: 600;
+        padding: 2px 14px;
+        border-radius: 99px;
+      }
+      .hero h1 {
+        font-size: clamp(34px, 6vw, 56px);
+        font-weight: 800;
+        line-height: 1.25;
+        margin: 14px 0 10px;
+      }
+      .hero h1 mark {
+        background: linear-gradient(transparent 62%, var(--gold2) 62%);
+        color: inherit;
+      }
+      .hero p {
+        color: var(--mu);
+        max-width: 480px;
+      }
+      .bt {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+      }
+      .btn {
+        display: inline-block;
+        background: var(--ink);
+        color: #fff;
+        font-weight: 700;
+        padding: 9px 22px;
+        border-radius: 99px;
+        border: 1px solid var(--ink);
+        cursor: pointer;
+        font: inherit;
+        font-weight: 700;
+        text-align: center;
+      }
+      .btn.g {
+        background: var(--gold2);
+        color: var(--ink);
+        border-color: var(--gold2);
+      }
+      .btn.o {
+        background: #fff;
+        color: var(--ink);
+      }
+      .btn[disabled],
+      .btn.off {
+        background: #e6e1d6;
+        color: #8b857a;
+        border-color: #e6e1d6;
+        cursor: not-allowed;
+      }
+      .fr {
+        position: relative;
+      }
+      .fr:before {
+        content: "";
+        position: absolute;
+        inset: 14px -12px -14px 12px;
+        background: var(--gold2);
+        border-radius: 22px;
+      }
+      .fr img {
+        position: relative;
+        display: block;
+        width: 100%;
+        border-radius: 22px;
+        border: 2px solid var(--ink);
+        background: #fff;
+      }
+      .cats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+      .cat {
+        border-radius: 22px;
+        padding: 20px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        border: 0;
+        font: inherit;
+        text-align: right;
+        transition: 0.2s;
+      }
+      .cat:hover {
+        transform: translateY(-3px);
+      }
+      .cat i {
+        font-style: normal;
+        font-size: 30px;
+      }
+      .cat b {
+        font-size: 20px;
+      }
+      .cat span {
+        font-size: 13px;
+        opacity: 0.7;
+      }
+      .cat.k {
+        background: var(--ink);
+        color: #fff;
+      }
+      .cat.g {
+        background: var(--gold2);
+        color: var(--ink);
+      }
+      section {
+        padding: 36px 0;
+      }
+      h2 {
+        font-size: 26px;
+        margin-bottom: 16px;
+      }
+      h2:after {
+        content: "";
+        display: block;
+        width: 44px;
+        height: 4px;
+        background: var(--gold);
+        border-radius: 4px;
+        margin-top: 2px;
+      }
+      .tabs {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+      }
+      .tabs button {
+        background: #fff;
+        color: var(--mu);
+        border: 1px solid var(--line);
+        padding: 5px 18px;
+        border-radius: 99px;
+        cursor: pointer;
+        font: inherit;
+      }
+      .tabs button.on {
+        background: var(--ink);
+        color: var(--gold2);
+        border-color: var(--ink);
+        font-weight: 700;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+      }
+      .p {
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: 0.2s;
+      }
+      .p:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 24px #0000001a;
+      }
+      .p .im {
+        position: relative;
+        aspect-ratio: 1;
+        background: var(--soft) center/cover;
+        display: grid;
+        place-items: center;
+        color: var(--mu);
+        font-size: 13px;
+      }
+      .p.out .im {
+        filter: grayscale(1);
+        opacity: 0.7;
+      }
+      .tag {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        background: #c0392b;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 700;
+        padding: 1px 10px;
+        border-radius: 99px;
+        z-index: 2;
+      }
+      .th {
+        display: flex;
+        gap: 6px;
+        padding: 8px 10px 0;
+        overflow-x: auto;
+      }
+      .th i {
+        flex: 0 0 38px;
+        height: 38px;
+        border-radius: 8px;
+        background: var(--soft) center/cover;
+        border: 2px solid transparent;
+        cursor: pointer;
+      }
+      .th i:hover {
+        border-color: var(--gold);
+      }
+      .p .b {
+        padding: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        flex: 1;
+      }
+      .p small {
+        color: var(--gold);
+      }
+      .p h3 {
+        font-size: 16px;
+      }
+      .p .d {
+        color: var(--mu);
+        font-size: 13px;
+      }
+      .p .pr {
+        align-self: flex-start;
+        background: var(--ink);
+        color: var(--gold2);
+        font-weight: 800;
+        padding: 0 12px;
+        border-radius: 99px;
+        margin-top: auto;
+        font-size: 14px;
+      }
+      .p .btn {
+        padding: 5px;
+        font-size: 14px;
+        margin-top: 6px;
+      }
+      .empty {
+        grid-column: 1/-1;
+        text-align: center;
+        color: var(--mu);
+        padding: 30px;
+      }
+      .band {
+        background: var(--ink);
+        color: #fff;
+        padding: 44px 0;
+        margin-top: 20px;
+      }
+      .band p {
+        color: #cfcfcf;
+        max-width: 620px;
+      }
+      .band h2:after {
+        background: var(--gold2);
+      }
+      .chips {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-top: 16px;
+      }
+      .chips span {
+        border: 1px solid #444;
+        color: var(--gold2);
+        padding: 2px 16px;
+        border-radius: 99px;
+        font-size: 14px;
+      }
+      .box {
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 20px;
+      }
+      .ct {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 12px;
+      }
+      .ct a {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 12px;
+        transition: 0.2s;
+      }
+      .ct a:hover {
+        border-color: var(--ink);
+        transform: translateY(-2px);
+      }
+      .ct em {
+        font-style: normal;
+        font-size: 22px;
+        background: var(--soft);
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        display: grid;
+        place-items: center;
+        flex: 0 0 44px;
+      }
+      .ct b {
+        display: block;
+      }
+      .ct span {
+        color: var(--mu);
+        font-size: 14px;
+      }
+      footer {
+        background: var(--ink);
+        padding: 26px 0;
+        text-align: center;
+        color: #bdbdbd;
+        font-size: 14px;
+      }
+      footer a {
+        color: var(--gold2);
+        font-weight: 600;
+      }
+      .fl {
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 10px 0;
+      }
+      .fl .btn.o {
+        background: transparent;
+        color: var(--gold2);
+        border-color: var(--gold2);
+        padding: 4px 16px;
+        font-size: 13px;
+      }
+      .wa {
+        position: fixed;
+        bottom: 16px;
+        left: 16px;
+        z-index: 8;
+        background: #25d366;
+        color: #fff;
+        font-weight: 700;
+        padding: 8px 18px;
+        border-radius: 99px;
+        box-shadow: 0 6px 18px #0003;
+      }
+      #adm {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: #000a;
+        z-index: 20;
+        overflow: auto;
+        padding: 16px;
+      }
+      #adm .box {
+        max-width: 560px;
+        margin: auto;
+      }
+      #adm input,
+      #adm select,
+      #adm textarea {
+        width: 100%;
+        background: #fff;
+        color: var(--ink);
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 9px;
+        margin: 5px 0;
+        font: inherit;
+      }
+      .row {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        border-bottom: 1px solid var(--line);
+        padding: 8px 0;
+        font-size: 14px;
+      }
+      .row span {
+        flex: 1;
+      }
+      .row button,
+      .pv button {
+        background: #fff;
+        border: 1px solid var(--line);
+        color: var(--ink);
+        border-radius: 8px;
+        padding: 2px 10px;
+        cursor: pointer;
+      }
+      .pv {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin: 6px 0;
+      }
+      .pv div {
+        position: relative;
+        width: 64px;
+        height: 64px;
+        border-radius: 8px;
+        background: #eee center/cover;
+      }
+      .pv button {
+        position: absolute;
+        top: -6px;
+        left: -6px;
+        padding: 0 6px;
+        color: #c0392b;
+      }
+      @media (min-width: 700px) {
+        .grid {
+          gap: 20px;
+        }
+      }
+          .hv {
+        padding-top: 16px;
+      }
+      .hv .hvi img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 22px;
+        border: 2px solid var(--ink);
+        box-shadow: 0 18px 40px #0000003a;
+      }
+      .hvc {
+        position: relative;
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        padding: 20px 18px;
+        margin: -26px 10px 0;
+        text-align: center;
+        box-shadow: 0 12px 30px #0000001f;
+      }
+      .hvc h1 {
+        font-size: clamp(26px, 5vw, 40px);
+        font-weight: 800;
+        line-height: 1.3;
+        margin: 12px 0 6px;
+      }
+      .hvc h1 mark {
+        background: linear-gradient(transparent 62%, var(--gold2) 62%);
+        color: inherit;
+      }
+      .hvc p {
+        color: var(--mu);
+        max-width: 520px;
+        margin: auto;
+      }
+      .hvc .bt {
+        justify-content: center;
+      }
+      @media (min-width: 800px) {
+        .hvc {
+          max-width: 760px;
+          margin: -52px auto 0;
+          padding: 26px;
+        }
+      }
+      .feat {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin: 22px 0 14px;
+      }
+      .feat div {
+        background: var(--soft);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 12px;
+        text-align: center;
+      }
+      .feat i {
+        font-style: normal;
+        font-size: 24px;
+        display: block;
+      }
+      .feat b {
+        font-size: 14px;
+      }
+      .wa {
+        width: 58px;
+        height: 58px;
+        padding: 0;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        bottom: 18px;
+        left: 18px;
+      }
+      .wa svg {
+        width: 34px;
+        height: 34px;
+        fill: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <a href="#" class="logo">HG</a>
+        <nav>
+          <a href="#products">المنتجات</a><a href="#about">عن HG</a
+          ><a href="#contact">تواصل معنا</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="wrap hv">
+      <div class="hvi">
+        <img
+          src="hero.jpg"
+          alt="معرض HG للأجهزة الكهربائية - دمياط"
+        />
+      </div>
+      <div class="hvc">
+        <span class="pill"
+          >لتجارة وتوزيع الأجهزة الكهربائية والأدوات المنزلية</span
+        >
+        <h1>كل اللي بيتك محتاجه، <mark>بسعر واضح.</mark></h1>
+        <p>أحدث الأجهزة وأفضل الماركات بأفضل الأسعار، والطلب بسهولة على واتساب.</p>
+        <div class="bt">
+          <a class="btn" href="#products">تصفح المنتجات</a
+          ><a
+            class="btn g"
+            href="https://wa.me/201286066660"
+            target="_blank"
+            rel="noopener"
+            >كلمنا على واتساب</a
+          ><a class="btn o" href="tel:+201286066660">اتصل بنا</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div class="feat">
+        <div><i>🚚</i><b>توصيل لجميع المناطق</b></div>
+        <div><i>💳</i><b>تقسيط بمقدم بسيط</b></div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div class="cats">
+        <button class="cat k" onclick="go('أجهزة كهربائية')">
+          <i>🔌</i><b>أجهزة كهربائية</b><span>تصفح القسم ←</span>
+        </button>
+        <button class="cat g" onclick="go('أدوات منزلية')">
+          <i>🍳</i><b>أدوات منزلية</b><span>تصفح القسم ←</span>
+        </button>
+      </div>
+
+      <section id="products">
+        <h2>منتجاتنا</h2>
+        <div class="tabs" id="tabs"></div>
+        <div class="grid" id="grid">
+          <div class="empty">بنجهز المنتجات...</div>
+        </div>
+      </section>
+    </div>
+
+    <section id="about" class="band">
+      <div class="wrap">
+        <h2>عن HG</h2>
+        <p>
+          متخصصين في تجارة وتوزيع الأجهزة الكهربائية والأدوات المنزلية. بنساعدك
+          تختار الأنسب لبيتك وميزانيتك، والطلب رسالة واحدة على واتساب.
+        </p>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <section id="contact">
+        <h2>تواصل معنا</h2>
+        <div class="ct">
+          <a href="https://wa.me/201286066660" target="_blank" rel="noopener"
+            ><em>💬</em>
+            <div><b>واتساب</b><span dir="ltr">0128 6066 660</span></div></a
+          >
+          <a href="tel:+201286066660"
+            ><em>📞</em>
+            <div>
+              <b>اتصال بالموبايل</b><span dir="ltr">0128 6066 660</span>
+            </div></a
+          >
+          <a href="tel:+20572333232"
+            ><em>☎️</em>
+            <div>
+              <b>اتصال بالأرضي</b><span dir="ltr">057 / 233 3232</span>
+            </div></a
+          >
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=%D8%A7%D9%84%D8%B4%D8%A7%D8%B1%D8%B9%20%D8%A7%D9%84%D8%AD%D8%B1%D8%A8%D9%8A%20%D8%A8%D8%AC%D9%88%D8%A7%D8%B1%20%D9%85%D8%A7%D8%B1%D9%83%D8%AA%20%D8%A7%D9%84%D9%83%D9%8A%D9%83%D9%8A%20%D8%AF%D9%85%D9%8A%D8%A7%D8%B7"
+            target="_blank"
+            rel="noopener"
+            ><em>📍</em>
+            <div>
+              <b>العنوان (افتح الخريطة)</b
+              ><span>دمياط: الشارع الحربي، بجوار ماركت الكيكي</span>
+            </div></a
+          >
+          <a
+            href="https://www.facebook.com/HGStore2022"
+            target="_blank"
+            rel="noopener"
+            ><em>👍</em>
+            <div><b>فيسبوك HG</b><span>صفحتنا الرسمية</span></div></a
+          >
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <div class="wrap">
+        <b class="gold" style="font-size: 22px">HG</b><br />© 2026 HG لتجارة
+        وتوزيع الأجهزة الكهربائية والأدوات المنزلية
+        <div style="margin-top: 10px">
+          تصميم وتطوير :
+          <a
+            href="https://www.facebook.com/profile.php?id=61594662582257"
+            target="_blank"
+            rel="noopener"
+            >Webcraft Studio</a
+          >
+        </div>
+        <div style="margin-top: 4px">
+          <a href="#admin" style="color: #8a8a8a">لوحة التحكم</a>
+        </div>
+      </div>
+    </footer>
+    <a
+      class="wa"
+      href="https://wa.me/201286066660"
+      target="_blank"
+      rel="noopener"
+      aria-label="واتساب"
+      ><svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" /></svg
+    ></a>
+
+    <div id="adm">
+      <div class="box">
+        <div style="display: flex; justify-content: space-between">
+          <h2>لوحة التحكم</h2>
+          <button class="btn o" onclick="closeAdm()">إغلاق</button>
+        </div>
+        <div id="login">
+          <input id="pw" type="password" placeholder="كلمة المرور" /><button
+            class="btn"
+            onclick="login()"
+          >
+            دخول
+          </button>
+        </div>
+        <div id="panel" style="display: none">
+          <input id="n" placeholder="اسم المنتج" /><input
+            id="pr"
+            type="number"
+            placeholder="السعر بالجنيه"
+          />
+          <select id="c">
+            <optgroup label="أجهزة كهربائية">
+              <option>غسالات</option>
+              <option>تلاجات</option>
+              <option>بوتوجازات</option>\n            <option>رفايع الأجهزة الكهربائية</option>
+            </optgroup>
+            <optgroup label="أدوات منزلية">
+              <option>أطقم سفرة</option>
+              <option>أطقم حلل</option>
+              <option>كاسات</option>
+              <option>كوبايات</option>
+            </optgroup>
+          </select>
+          <select id="av">
+            <option value="1">متاح</option>
+            <option value="0">منتهي</option>
+          </select>
+          <textarea id="d" rows="2" placeholder="وصف قصير"></textarea>
+          <label style="font-size: 13px; color: var(--mu)"
+            >صور المنتج (لحد 5 صور، تقدر تختار أكتر من صورة مرة واحدة)</label
+          >
+          <input id="f" type="file" accept="image/*" multiple />
+          <div class="pv" id="pv"></div>
+          <button class="btn" id="save" onclick="save()">إضافة المنتج</button>
+          <button class="btn o" onclick="reset()">مسح</button>
+          <div id="list" style="margin-top: 14px"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const ELEC = ["غسالات", "تلاجات", "بوتوجازات", "رفايع الأجهزة الكهربائية"],
+        HOME = ["أطقم سفرة", "أطقم حلل", "كاسات", "كوبايات"],
+        CATS = ["الكل", ...ELEC, ...HOME];
+      let all = [],
+        cat = "الكل",
+        edit = null,
+        imgs = [];
+      const S = {
+        get: () => {
+          try {
+            return sessionStorage.pw || "";
+          } catch {
+            return "";
+          }
+        },
+        set: (v) => {
+          try {
+            sessionStorage.pw = v;
+          } catch {}
+        },
+      };
+      let pw = S.get();
+      const $ = (id) => document.getElementById(id),
+        esc = (s) =>
+          String(s ?? "").replace(
+            /[&<>"']/g,
+            (m) =>
+              ({
+                "&": "&amp;",
+                "<": "&lt;",
+                ">": "&gt;",
+                '"': "&quot;",
+                "'": "&#39;",
+              })[m],
+          );
+      const im = (p) =>
+        p.images && p.images.length ? p.images : p.image ? [p.image] : [];
+      const api = (m, b) =>
+        fetch("/api/products", {
+          method: m,
+          headers: {
+            "Content-Type": "application/json",
+            "x-admin-password": pw,
+          },
+          body: b ? JSON.stringify(b) : undefined,
+        });
+      function tabs() {
+        $("tabs").innerHTML = CATS.map(
+          (c) =>
+            `<button class="${c == cat ? "on" : ""}" onclick="cat='${c}';tabs();draw()">${c}</button>`,
+        ).join("");
+      }
+      function pick(id, i) {
+        const p = all.find((x) => x._id == id);
+        $("m" + id).style.backgroundImage = "url('" + im(p)[i] + "')";
+      }
+      function draw() {
+        const l = all.filter(
+          (p) =>
+            cat == "الكل" ||
+            p.category == cat ||
+            (cat == "أجهزة كهربائية" && ELEC.includes(p.category)) ||
+            (cat == "أدوات منزلية" && HOME.includes(p.category)),
+        );
+        $("grid").innerHTML = l.length
+          ? l
+              .map((p) => {
+                const ok = p.available !== false,
+                  a = im(p);
+                return `<div class="p ${ok ? "" : "out"}"><div class="im" id="m${p._id}" style="${a[0] ? `background-image:url('${esc(a[0])}')` : ""}">${ok ? "" : '<span class="tag">منتهي</span>'}${a[0] ? "" : "بدون صورة"}</div>${a.length > 1 ? `<div class="th">${a.map((x, i) => `<i style="background-image:url('${esc(x)}')" onclick="pick('${p._id}',${i})"></i>`).join("")}</div>` : ""}<div class="b"><small>${esc(p.category)}</small><h3>${esc(p.name)}</h3><div class="d">${esc(p.desc)}</div><div class="pr">${p.price ? Number(p.price).toLocaleString("ar-EG") + " جنيه" : "اسأل عن السعر"}</div>${ok ? `<a class="btn" target="_blank" rel="noopener" href="https://wa.me/201286066660?text=${encodeURIComponent("عايز أطلب: " + p.name)}">اطلب على واتساب</a>` : '<span class="btn off">غير متاح حاليًا</span>'}</div></div>`;
+              })
+              .join("")
+          : '<div class="empty">مفيش منتجات هنا لسه.</div>';
+      }
+      async function load() {
+        try {
+          all = await (await fetch("/api/products")).json();
+          if (!Array.isArray(all)) all = [];
+        } catch {
+          all = [];
+        }
+        draw();
+        if ($("panel").style.display == "block") list();
+      }
+      function openAdm() {
+        $("adm").style.display = "block";
+        if (pw) login(true);
+      }
+      function closeAdm() {
+        $("adm").style.display = "none";
+        history.replaceState(0, "", "#");
+      }
+      async function login(q) {
+        if (!q) pw = $("pw").value;
+        const r = await fetch("/api/products?auth=1", {
+          headers: { "x-admin-password": pw },
+        });
+        if (r.ok) {
+          S.set(pw);
+          $("login").style.display = "none";
+          $("panel").style.display = "block";
+          list();
+        } else {
+          pw = "";
+          S.set("");
+          if (!q)
+            alert(
+              r.status == 401
+                ? "كلمة المرور غلط"
+                : "ADMIN_PASSWORD مش متضاف على Vercel أو محتاج Redeploy",
+            );
+        }
+      }
+      function list() {
+        $("list").innerHTML = all
+          .map(
+            (p) =>
+              `<div class="row"><span>${esc(p.name)} — ${esc(p.price)} — ${p.available === false ? "منتهي" : "متاح"}</span><button onclick="ed('${p._id}')">تعديل</button><button onclick="del('${p._id}')">حذف</button></div>`,
+          )
+          .join("");
+      }
+      function pv() {
+        $("pv").innerHTML = imgs
+          .map(
+            (x, i) =>
+              `<div style="background-image:url('${esc(x)}')"><button onclick="imgs.splice(${i},1);pv()">×</button></div>`,
+          )
+          .join("");
+      }
+      function reset() {
+        edit = null;
+        imgs = [];
+        ["n", "pr", "d", "f"].forEach((i) => ($(i).value = ""));
+        $("av").value = "1";
+        $("save").textContent = "إضافة المنتج";
+        pv();
+      }
+      function ed(id) {
+        const p = all.find((x) => x._id == id);
+        edit = id;
+        imgs = im(p).slice();
+        $("n").value = p.name;
+        $("pr").value = p.price;
+        $("c").value = p.category;
+        $("av").value = p.available === false ? "0" : "1";
+        $("d").value = p.desc;
+        $("save").textContent = "حفظ التعديل";
+        pv();
+        scrollTo(0, 0);
+      }
+      async function del(id) {
+        if (confirm("تحذف المنتج؟")) {
+          await api("DELETE", { id });
+          load();
+        }
+      }
+      async function save() {
+        if (!$("n").value.trim()) return alert("اكتب اسم المنتج");
+        const b = {
+          name: $("n").value,
+          price: $("pr").value,
+          category: $("c").value,
+          desc: $("d").value,
+          images: imgs,
+          available: $("av").value == "1",
+        };
+        const r = edit
+          ? await api("PUT", { ...b, id: edit })
+          : await api("POST", b);
+        if (!r.ok) return alert("حصلت مشكلة، راجع الاتصال بقاعدة البيانات");
+        reset();
+        load();
+      }
+      $("f").onchange = (e) => {
+        [...e.target.files].forEach((f) => {
+          if (imgs.length >= 5) return;
+          const i = new Image();
+          i.onload = () => {
+            if (imgs.length >= 5) return;
+            const s = Math.min(1, 600 / Math.max(i.width, i.height)),
+              c = document.createElement("canvas");
+            c.width = i.width * s;
+            c.height = i.height * s;
+            c.getContext("2d").drawImage(i, 0, 0, c.width, c.height);
+            imgs.push(c.toDataURL("image/jpeg", 0.72));
+            pv();
+          };
+          i.src = URL.createObjectURL(f);
+        });
+        e.target.value = "";
+      };
+      addEventListener("hashchange", () => {
+        if (location.hash == "#admin") openAdm();
+      });
+      if (location.hash == "#admin") openAdm();
+      function go(c) {
+        cat = c;
+        tabs();
+        draw();
+        location.hash = "products";
+      }
+      tabs();
+      load();
+    </script>
+  </body>
+</html>
